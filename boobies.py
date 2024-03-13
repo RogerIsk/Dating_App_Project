@@ -24,3 +24,8 @@ bikes = []
 bikes.append('trek')
 bikes.append('bigtrain')
 new_bike = [-1] #get the last item in a list
+
+
+
+
+#HELLO THERE
