@@ -1,5 +1,3 @@
-
-
 msg="Separatists vs Han Solo"
 print(msg)
 
