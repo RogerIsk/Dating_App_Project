@@ -16,6 +16,5 @@ print(first_bike)
 last_bike = bikes[-1]
 print(last_bike)
 
-print('skibidi')
 for i in range(5):
     print(i)
