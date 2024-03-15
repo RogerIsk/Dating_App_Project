@@ -7,8 +7,8 @@ import subprocess #importing the 'subprocess module' allows us o open our progra
 
 def open_terminal(): #function to open this program in a new terminal window
     script_name = "DCI_Class_Dating_App.py" #the name of the script
-    gnome-terminal = "python3 " + script_name #the command to open the script in a new terminal window
-    subprocess.Popen(open_terminal, shell=True) #opens the script in a new terminal window
+    terminal_command = "python3 " + script_name #the command to open the script in a new terminal window
+    subprocess.Popen(terminal_command, shell=True) #opens the script in a new terminal window
 
 open_terminal()
 
