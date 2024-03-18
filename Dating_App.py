@@ -4,6 +4,9 @@ import time #importing the 'time module' allows your program to use time / examp
 import subprocess #importing the 'subprocess module' allows us o open our program in a new terminal window
 from faker import Faker
 
+filename = "Dating_App.py" #the name of the file
+absolute_path = os.path.abspath(filename) # Convert relative path to absolute path
+
 def open_terminal(): #function to open this program in a new terminal window
     script_name = "DCI_Class_Dating_App.py" #the name of the script
     terminal_command = "python3 " + script_name #the command to open the script in a new terminal window
