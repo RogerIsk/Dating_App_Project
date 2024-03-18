@@ -16,7 +16,7 @@ open_terminal()
 
 def clear_screen(): #function to clear the screen that we will call multiple times / this is the reason we imported the 'os module'
     os.system('clear')
-clear_screen() #calling the function to clear the screen
+clear_screen() #calling t1he function to clear the screen
 
 
 
