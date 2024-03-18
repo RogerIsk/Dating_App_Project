@@ -9,14 +9,13 @@ clear_screen()                          #calling t1he function to clear the scre
 
 
 
-print('\n''Welcome to the Dating App!') #print the welcome message
+print('\n''Welcome to the Dati2ng App!') #print the welcome message
 time.sleep(2)                           #wait for 2 seconds
 clear_screen()                          #clear the screen
 
-
-people = [['Markus' , 'Anton' , 'Benjamin' , 'Erik' , 'Burak', 'Dess' , 'Roger' , 'Roman' , 'Sunny' , 'Hassan'] ,   
-          ['Hiba' , 'Morgane','Vanessa']]                          #a list of people looking for love
-male   = ['man','male','men','males', 1]                           #we give the variable different values through the usage of a list
+#a list of partners looking for love
+partners = (['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald'],
+            ['Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna'])         
 female = ['woman','female','women','females', 2]                   #we give the variable different values through the usage of a list
 player = ''                                                        #we give the variable 'player' the value of an empty string
 
@@ -42,22 +41,18 @@ while True:                                                        #a while loop
     
 
 
-    print('\nYou are a', player, '\n')  
 print('\n''Choose what do you want to date:''\n')
 print('1. Men              ''2. Women               ''3. Both''\n')
-player = ''                                                        #we give the variable 'player' the value of an empty string
-while True:                                                        #a while loop that will keep running until the user inputs a valid option
-    player = input('\n').lower()                 # Convert input to lowercase for case-insensitive comparison
-    if player in ['1', 'man', 'male', 'men', 'males']:             #if the user inputs a valid option
-        player = 'man'                                             #we give the variable 'player' the value  
-        print('\nYou are a', player, '\n')                         #print the message
-        time.sleep(2)                                              #wait for 2 seconds
-        clear_screen()                                             #clear the screen
+male = ''    
+female = ''                                                      #we give the variable 'player' the value of an empty string
+while True:                                                      #a while loop that will keep running until the user inputs a valid option
+    male = input('\n').lower()                                   # Convert input to lowercase for case-insensitive comparison
+    if male in ['1', 'man', 'male', 'men', 'males']:             #if the user inputs a valid option     
+        malepartners = ', '.join(map(str, partners[0]))                #we output to the screen the first row of the list 'partners' with commas inbetween them
+        print('\n These are your potential male partners:', malepartners, '\n' )         
         break                                                      #break the loop
-    elif player in ['2', 'woman', 'female', 'women', 'females']:   #if the user inputs a valid option
-        player = 'woman'                                           #we give the variable 'player' the value
-        clear_screen()                                             #clear the screen
-        print('\nYou are a', player, '\n')                         #print the message
+    elif partners in ['2', 'woman', 'female', 'women', 'females']:   #if the user inputs a valid option
+    
         break                                                      #break the loop
     else:                                                          #if the user inputs an invalid option
         print('Input a valid option!\n\n')                         #print the message
