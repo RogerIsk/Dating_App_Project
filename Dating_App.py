@@ -2,7 +2,6 @@ import os #importing the 'os module' which lets us use the system commands
 import keyboard #importing the 'keyboard module' which lets us use the keyboard
 import time #importing the 'time module' allows your program to use time / example: time.sleep(2) will make the program wait for 2 seconds
 import subprocess #importing the 'subprocess module' allows us o open our program in a new terminal window
-from faker import Faker
 
 def open_terminal(): #function to open this program in a new terminal window
     script_name = "Dating_App.py" #the name of the script
@@ -30,12 +29,12 @@ female = ['woman','female','women','females', 2]   #we give the variable differe
 player = 1
 print('\n''Viable options in this Demo are "Male" and "Female".''\n''Choose your sex:''\n''\n''1. Male              ''2. Female               ''\n')
 player = input('Enter your choice: ' '\n''\n')
-if player in ['1', 'man', 'male', 'men', 'males']:
+if player == ['1', 'man', 'male', 'men', 'males']:
     player = 'man'
     print('\n''You are a', player, '\n')
     time.sleep(2)
     clear_screen()
-elif player in ['2', 'woman', 'female', 'women', 'females']:
+if player == ['2', 'woman', 'female', 'women', 'females']:
     player = 'woman'
     clear_screen()
     print('\n''You are a', player, '\n')
