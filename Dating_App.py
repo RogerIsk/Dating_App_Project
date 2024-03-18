@@ -1,13 +1,6 @@
 import os #importing the 'os module' which lets us use the system commands
 import keyboard #importing the 'keyboard module' which lets us use the keyboard
 import time #importing the 'time module' allows your program to use time / example: time.sleep(2) will make the program wait for 2 seconds
-import subprocess #importing the 'subprocess module' allows us o open our program in a new terminal window
-
-def open_terminal(): #function to open this program in a new terminal window
-    script_name = "Dating_App.py" #the name of the script
-    terminal_command = "python3 " + script_name #the command to open the script in a new terminal window
-    subprocess.Popen(terminal_command, shell=True) #opens the script in a new terminal window
-open_terminal() #calling the function to open the script in a new terminal window
 
 def clear_screen(): #function to clear the screen that we will call multiple times / this is the reason we imported the 'os module'
     os.system('clear') #this command clears the screen
@@ -26,22 +19,27 @@ people = [['Markus' , 'Anton' , 'Benjamin' , 'Erik' , 'Burak', 'Dess' , 'Roger' 
 male   = ['man','male','men','males', 1]           #we give the variable different values through the usage of a list
 female = ['woman','female','women','females', 2]   #we give the variable different values through the usage of a list
 
-player = 1
-print('\n''Viable options in this Demo are "Male" and "Female".''\n''Choose your sex:''\n''\n''1. Male              ''2. Female               ''\n')
-player = input('Enter your choice: ' '\n''\n')
-if player == ['1', 'man', 'male', 'men', 'males']:
-    player = 'man'
-    print('\n''You are a', player, '\n')
-    time.sleep(2)
-    clear_screen()
-if player == ['2', 'woman', 'female', 'women', 'females']:
-    player = 'woman'
-    clear_screen()
-    print('\n''You are a', player, '\n')
-else:
-    print('Please enter a valid choice''\n')
-    time.sleep(2)
-    clear_screen()
+player = ''
+print('\nViable options in this Demo are "Male" and "Female".\nChoose your sex:\n\n1. Male              2. Female\n')
+
+while True:
+    player = input('Enter your choice: \n\n').lower()  # Convert input to lowercase for case-insensitive comparison
+    if player in ['1', 'man', 'male', 'men', 'males']:
+        player = 'man'
+        print('\nYou are a', player, '\n')
+        time.sleep(2)
+        clear_screen()
+        break
+    elif player in ['2', 'woman', 'female', 'women', 'females']:
+        player = 'woman'
+        clear_screen()
+        print('\nYou are a', player, '\n')
+        break
+    else:
+        print('Input a valid option!\n\n')
+        time.sleep(2)
+        clear_screen()
+    
 
 male   = 1 #we give the variable 'male' the value of 1 / this is the first row of the list
 female = 2 #we give the variable 'female' the value of 2 / this is the second row of the list
