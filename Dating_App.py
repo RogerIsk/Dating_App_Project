@@ -4,11 +4,8 @@ import time #importing the 'time module' allows your program to use time / examp
 import subprocess #importing the 'subprocess module' allows us o open our program in a new terminal window
 from faker import Faker
 
-filename = "Dating_App.py" #the name of the file
-absolute_path = os.path.abspath(filename) # Convert relative path to absolute path
-
 def open_terminal(): #function to open this program in a new terminal window
-    script_name = "DCI_Class_Dating_App.py" #the name of the script
+    script_name = "Dating_App.py" #the name of the script
     terminal_command = "python3 " + script_name #the command to open the script in a new terminal window
     subprocess.Popen(terminal_command, shell=True) #opens the script in a new terminal window
 open_terminal() #calling the function to open the script in a new terminal window
@@ -23,39 +20,32 @@ opening_screen()
 #time.sleep(2) #pauses the program for 2 seconds
 clear_screen() #calling the function to clear the screen
 
-
-
 #a list of people looking for love
 people = [['Markus' , 'Anton' , 'Benjamin' , 'Erik' , 'Burak', 'Dess' , 'Roger' , 'Roman' , 'Sunny' , 'Hassan'] ,
           ['Hiba' , 'Morgane','Vanessa']] 
 
 male   = ['man','male','men','males', 1]           #we give the variable different values through the usage of a list
 female = ['woman','female','women','females', 2]   #we give the variable different values through the usage of a list
+
+player = 1
+print('\n''Viable options in this Demo are "Male" and "Female".''\n''Choose your sex:''\n''\n''1. Male              ''2. Female               ''\n')
+player = input('Enter your choice: ' '\n''\n')
+if player in ['1', 'man', 'male', 'men', 'males']:
+    player = 'man'
+    print('\n''You are a', player, '\n')
+    time.sleep(2)
+    clear_screen()
+elif player in ['2', 'woman', 'female', 'women', 'females']:
+    player = 'woman'
+    clear_screen()
+    print('\n''You are a', player, '\n')
+else:
+    print('Please enter a valid choice''\n')
+    time.sleep(2)
+    clear_screen()
+
 male   = 1 #we give the variable 'male' the value of 1 / this is the first row of the list
 female = 2 #we give the variable 'female' the value of 2 / this is the second row of the list
-player = 'man' #we give the variable 'player' the value of 'man'
-
-print('\n''Viable options in this Demo are "Male" and "Female".''\n''Choose your sex:''\n')
-print('1. Male              ''2. Female               ''\n')
-
-player == input('Enter your choice: ' '\n')
-if input == '1''man''male''men''males':
-    player == 'man'
-    clear_screen() #calling the function to clear the screen
-    print('\n''You are a ', player, '\n')
-
-if input == '2''woman''female''women''females':
-    player == 'woman'
-    
-    clear_screen() #calling the function to clear the screen
-    print('\n''You are a', player, '\n')
-
-
-
-
-
-
-
 
 
 print('\n''Choose what you want to date:''\n')
