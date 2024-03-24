@@ -9,7 +9,7 @@ clear_screen()                          #calling t1he function to clear the scre
 
 
 
-print('\n''Welcome to the Dati2ng App!') #print the welcome message
+print('\n''Welcome to the Dating App!') #print the welcome message
 time.sleep(2)                           #wait for 2 seconds
 clear_screen()                          #clear the screen
 
@@ -35,27 +35,42 @@ while True:                                                        #a while loop
         time.sleep(2)                      #print the message
         break                                                      #break the loop
     else:                                                          #if the user inputs an invalid option
-        print('\n Input a valid option! \n\n')                         #print the message
+        print('\nInput a valid option! \n')                         #print the message
         time.sleep(2)                                              #wait for 2 seconds
         clear_screen()                                             #clear the screen
     
 
 
-print('\n''Choose what do you want to date:''\n')
-print('1. Men              ''2. Women               ''3. Both''\n')
-male = ''    
-female = ''                                                      #we give the variable 'player' the value of an empty string
-while True:                                                      #a while loop that will keep running until the user inputs a valid option
-    male = input('\n').lower()                                   # Convert input to lowercase for case-insensitive comparison
-    if male in ['1', 'man', 'male', 'men', 'males']:             #if the user inputs a valid option     
-        malepartners = ', '.join(map(str, partners[0]))                #we output to the screen the first row of the list 'partners' with commas inbetween them
+
+partnerchoice = ''                                                          #we give the variable 'player' the value of an empty string
+while True:           
+    print('\n''Choose what do you want to date:''\n')
+    print('1. Men              ''2. Women               ''3. Both''\n')                                                      #a while loop that will keep running until the user inputs a valid option
+    partnerchoice = input('').lower()                                     # Convert input to lowercase for case-insensitive comparison
+    if partnerchoice in ['1', 'man', 'male', 'men', 'males']:               #if thelid o user inputs a vaption     
+        malepartners = ', '.join(map(str, partners[0]))                     #we output to the screen the first row of the list 'partners' with commas inbetween them
+        clear_screen() 
+        print('\n You have decided to date men.')
+        time.sleep(2) 
         print('\n These are your potential male partners:', malepartners, '\n' )         
-        break                                                      #break the loop
-    elif partners in ['2', 'woman', 'female', 'women', 'females']:   #if the user inputs a valid option
-    
-        break                                                      #break the loop
-    else:                                                          #if the user inputs an invalid option
-        print('Input a valid option!\n\n')                         #print the message
-        time.sleep(2)                                              #wait for 2 seconds
-        clear_screen()                                             #clear the screen
+        break                                                               #break the loop
+    elif partnerchoice in ['2', 'woman', 'female', 'women', 'females']:            #if the user inputs a valid option
+        femalepartners = ', '.join(map(str, partners[1]))                   #we output to the screen the second row of the list 'partners' with commas inbetween them
+        clear_screen() 
+        print('\n You have decided to date women.')
+        time.sleep(2) 
+        print('\n These are your potential female partners:', femalepartners, '\n' )
+        break           
+    elif partnerchoice in ['3', 'women and men', 'men and women', 'females and males', 'males and females', 'both', 'all']: #if the user inputs a valid option
+        malepartners = ', '.join(map(str, partners[0]))                   #we output to the screen the second row of the list 'partners' with commas inbetween them
+        femalepartners = ', '.join(map(str, partners[1])) 
+        clear_screen() 
+        print('\n You have decided to date both genders.')
+        time.sleep(2) 
+        print('\n These are your potential partners:\n\n', malepartners , '\n' ,femalepartners, '\n' )
+        break                                                          #break the loop
+    else:                                                                   #if the user inputs an invalid option
+        print('\nInput a valid option!\n')                                  #print the message
+        time.sleep(2)                                                       #wait for 2 seconds
+        clear_screen()                                                      #clear the screen
 
