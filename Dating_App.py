@@ -3,22 +3,32 @@ import keyboard                         #lets us use the keyboard
 import time                             #allows your program to use time / example: time.sleep(2) will make the program wait for 2 seconds
 import random                           #allows your program to use random / example: random.randint(1, 10) will return a random number between 1 and 10
 
+
+
+#================================================================
 def clear_screen():                     #function to clear the screen that we will call multiple times / this is the reason we imported the 'os module'
     os.system('clear')                  #this command clears the screen
 clear_screen()                          #calling t1he function to clear the screen
 
 
 
+#================================================================
 print('\n''Welcome to the Dating App!') #print the welcome message
 time.sleep(2)                           #wait for 2 seconds
 clear_screen()                          #clear the screen
 
+
+
+#================================================================
 #a list of partners looking for love
 partners = (['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald'],
             ['Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna'])         
-female = ['woman','female','women','females', 2]                   #we give the variable different values through the usage of a list
-player = ''                                                        #we give the variable 'player' the value of an empty string
 
+
+
+#================================================================
+#while loop that lets us choose what gender we are
+player = ''                                                        #we give the variable 'player' the value of an empty string
 while True:                                                        #a while loop that will keep running until the user inputs a valid option
     print('\nViable options in this Demo are "1. Men" and "2. Women" for simplicity.\n') #print the message
     player = input('Choose your sex:\n\n').lower()                 # Convert input to lowercase for case-insensitive comparison
@@ -41,7 +51,8 @@ while True:                                                        #a while loop
     
 
 
-
+#================================================================
+#while loop that lets us choose what gender we want to date
 partnerchoice = ''                                                          #we give the variable 'player' the value of an empty string
 while True:           
     print('\n''Choose what do you want to date:''\n')
@@ -73,4 +84,8 @@ while True:
         print('\nInput a valid option!\n')                                  #print the message
         time.sleep(2)                                                       #wait for 2 seconds
         clear_screen()                                                      #clear the screen
+
+
+
+
 
