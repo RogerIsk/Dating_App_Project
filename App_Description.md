@@ -1,9 +1,10 @@
-># Dating App
-## Description:
-- The program gives you the option of choosing a gender for your character.
-- After that you can choose which genders (or all) you want to date.
-- Depending on your answer you are given a list of people you can choose from.
-- You choose one of the given options and you get an interaction depending on the genders of your character and the person you chose as an in-game partner.
+# 💌 Dating App
 
-## RELEASED VERSIONS
->- 1.00 - 25.03.2024
+## Description
+- The program allows you to select a gender for your character.
+- You can then choose which genders (or all) you're interested in dating.
+- Based on your preferences, you'll receive a list of potential matches.
+- Select one from the list, and engage in an interaction based on the genders of your character and the chosen partner. 💖
+
+## Released Versions
+- 🌟 **Version 1.00** - *25.03.2024*
