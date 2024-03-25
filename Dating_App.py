@@ -91,16 +91,42 @@ while True:
 
 #================================================================
 #while loop that lets us choose which exact male partner do we wanna date   
-print('Chose the person you want to date from the list above: \n')                           #print the message
+print('Chose the person you want to date from the list above: \n')                        
 partner = ''  
 while partnergender in ('1', 'man', 'male', 'men', 'males'): 
-    partner = input().title()                                                                              #a while loop that will keep running until the user inputs a valid option                                                           
-    if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald']:                                    #if the user inputs a valid option
-        clear_screen()                                                                      #clear the screen
-        print('You have chosen to date', partner + '.')                                           #print the message
-        time.sleep(2)                                                                       #wait for 2 seconds
-        break                                                                               #break the loop
-    else:                                                                                   #if the user inputs an invalid option
-        print('\nInput a valid option!\n')                                                  #print the message
-        time.sleep(2)                                                                       #wait for 2 seconds
-        clear_screen()                                                                      #clear the screen
+    partner = input().title()
+    if player in ('man'):                                                                                                           
+        if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald']:                                    
+            clear_screen()                                                                     
+            print('You have chosen to date', partner + '.')                                           
+            time.sleep(2)
+            clear_screen()     
+            print('\nHe takes you upstairs...\n')
+            time.sleep(2)
+            print('..and starts slurping on that juicy..\n')     
+            time.sleep(2)
+            print('...watermelon juice while watching netflix with you.\n') 
+            time.sleep(2)                                                            
+            break                                                                          
+        else:                                                                                 
+            print('\nInput a valid option!\n')                                                 
+            time.sleep(2)                                                                      
+            clear_screen()        
+    if player in ('woman'):                                                                   
+        if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald']:                                    
+            clear_screen()                                                                     
+            print('You have chosen to date', partner + '.')                                           
+            time.sleep(2)
+            clear_screen()     
+            print('\nHe takes down his pants...\n')
+            time.sleep(2)
+            print('..you go down on your knees..\n')     
+            time.sleep(2)
+            print('...and you start sewing his loose button.\n')  
+            time.sleep(2)                                                           
+            break                                                                          
+        else:                                                                                 
+            print('\nInput a valid option!\n')                                                 
+            time.sleep(2)                                                                      
+            clear_screen()
+        
