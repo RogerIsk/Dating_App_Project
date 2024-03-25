@@ -1,28 +1,26 @@
-#================================================================
 #importing libraries that we will use in the program
 import os               #lets us use the system commands
 import keyboard                         #lets us use the keyboard
 import time                             #allows your program to use time / example: time.sleep(2) will make the program wait for 2 seconds
 import random                           #allows your program to use random / example: random.randint(1, 10) will return a random number between 1 and 10
-#================================================================
+
 #function to clear the screen, we will call in later in the program
 def clear_screen():     #function to clear the screen that we will call multiple times / this is the reason we imported the 'os module'
     os.system('clear')  #this command clears the screen
 clear_screen()          #calling t1he function to clear the screen
-#================================================================
-#creating global variables that we will use in the program
+
+
+#a list of partners looking for love followed by global variables that we will use in the program
+partners = (['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald'],
+            ['Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna'])         
 player = ''
 partnergender = ''
 partner = ''
-#================================================================
-#a list of partners looking for love
-partners = (['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald'],
-            ['Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna'])         
-#================================================================
+
 print('\n''Welcome to the Dating App!') #print the welcome message
 time.sleep(2)                           #wait for 2 seconds
 clear_screen()                          #clear the screen
-#================================================================
+
 #while loop that lets us choose what gender we are                                                       
 while True:                                                        
     print('\nViable options in this Demo are "1. Men" and "2. Women" for simplicity.\n') #print the message
@@ -43,7 +41,7 @@ while True:
         print('\nInput a valid option! \n')                        #print the message
         time.sleep(2)                                              #wait for 2 seconds
         clear_screen()                                             #clear the screen
-#================================================================
+
 #while loop that lets us choose what gender we want to date                  
 while True:           
     print('\n''Choose what do you want to date:''\n')
@@ -78,7 +76,7 @@ while True:
         print('\nInput a valid option!\n')                                  #print the message
         time.sleep(2)                                                       #wait for 2 seconds
         clear_screen()                                                      #clear the screen
-#================================================================
+
 #while loop that lets us choose which exact male partner do we wanna date                         
 while partnergender in ('1', 'man', 'male', 'men', 'males'): 
     print('Chose the person you want to date from the list above: \n')
@@ -116,8 +114,8 @@ while partnergender in ('1', 'man', 'male', 'men', 'males'):
         else:                                                                                 
             print('\nInput a valid option!\n')                                                 
             time.sleep(2)                                                                      
-            clear_screen()
-#================================================================
+            clear_screen()#================================================================
+
 #while loop that lets us choose which exact female partner do we wanna date                            
 while partnergender in ('2', 'woman', 'female', 'women', 'females'): 
     print('Chose the person you want to date from the list above: \n')
@@ -156,3 +154,73 @@ while partnergender in ('2', 'woman', 'female', 'women', 'females'):
             print('\nInput a valid option!\n')                                                 
             time.sleep(2)                                                                      
             clear_screen()
+
+#while loop that lets us choose which exact male or female partner do we wanna date                            
+while partnergender in ('3', 'women and men', 'men and women', 'females and males', 'males and females', 'both', 'all'): 
+    print('Chose the person you want to date from the list above: \n')
+    partner = input().title()
+    if player in ('man'):                                                                                                           
+        if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald', 
+                       'Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna']:                                    
+            if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald']:                                    
+                clear_screen()                                                                     
+                print('You have chosen to date', partner + '.')                                           
+                time.sleep(2)
+                clear_screen()     
+                print('\nHe puts his hand in his jeans...\n')
+                time.sleep(2)
+                print('..starts shaking his pockets and..\n')     
+                time.sleep(2)
+                print('...tells you how many coins he has.\n') 
+                time.sleep(2)                                                            
+                break
+            if partner in ['Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna']:
+                clear_screen()                                                                     
+                print('You have chosen to date', partner + '.')                                           
+                time.sleep(2)
+                clear_screen()     
+                print('\nShe stairs at you...\n')
+                time.sleep(3)
+                print('...\n')     
+                time.sleep(5)
+                print("...You've made it this far, I guess I'll go down on you at last.\n") 
+                time.sleep(2)
+                clear_screen()  
+                print('YOU WIN!')
+                time.sleep(4)                                                         
+                break                                                                        
+            else:                                                                                 
+                print('\nInput a valid option!\n')                                                 
+                time.sleep(2)                                                                      
+                clear_screen()        
+    if player in ('woman'):                                                                                                           
+        if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald', 
+                       'Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna']:                                    
+            if partner in ['Marius', 'Panton', 'Ben 10', 'Edison', 'Burg', 'Desmond', 'Rolland', 'Romeo', 'Sandy', 'Haschwald']:                                    
+                clear_screen()                                                                     
+                print('You have chosen to date', partner + '.')                                           
+                time.sleep(2)
+                clear_screen()     
+                print('\nHe stairs at your chest...\n')
+                time.sleep(2)
+                print('..his hands get closer almost grabbing it..\n')     
+                time.sleep(2)
+                print('...he buttons up your shirt.\n') 
+                time.sleep(2)                                                            
+                break
+            if partner in ['Himber', 'Kilimari', 'Lady Gaga', 'Mariana', 'Merry', 'Katty', 'Perry', 'Samanta', 'Clover', 'Luna']:
+                clear_screen()                                                                     
+                print('You have chosen to date', partner + '.')                                           
+                time.sleep(2)
+                clear_screen()     
+                print('\nShe is checking you out...\n')
+                time.sleep(2)
+                print('..goes behind you and waves with her hand towards your butt..\n')     
+                time.sleep(2)
+                print('...she kills a fly mid air, she is very fast.\n') 
+                time.sleep(2)                                                            
+                break                                                                        
+            else:                                                                                 
+                print('\nInput a valid option!\n')                                                 
+                time.sleep(2)                                                                      
+                clear_screen()        
