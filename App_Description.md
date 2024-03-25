@@ -1,25 +1,9 @@
-# I will use this file to describe my program 
-# when I finish doing it 
+># Dating App
+## Description:
+- The program gives you the option of choosing a gender for your character.
+- After that you can choose which genders (or all) you want to date.
+- Depending on your answer you are given a list of people you can choose from.
+- You choose one of the given options and you get an interaction depending on the genders of your character and the person you chose as an in-game partner.
 
-> Dating App - List of goals:
-- Create a user registration system
-- Implement user authentication and authorization
-- Design and develop a user profile page
-- Build a matching algorithm for potential matches
-- Enable users to search and filter profiles
-- Implement real-time messaging functionality
-- Integrate social media sharing features
-- Enhance security measures to protect user data
-- Optimize app performance and scalability
-- Conduct thorough testing and debugging
-- Provide comprehensive documentation for the app
-
-## STEPS:
-After starting the project:
-
-1. Have fun
-2. Code
-3. Learn
-
-```py
-import os
+## RELEASED VERSIONS
+>- 1.00 - 25.03.2024
